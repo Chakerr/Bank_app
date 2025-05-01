@@ -2,30 +2,47 @@
 
 **Proyecto taller:** Aplicación de línea de comandos para gestión bancaria.
 
-## Objetivo del taller
+## Requisitos
 
-En este taller se desarrolló una pequeña aplicación en Python con los siguientes propósitos:
+- Python 3.8 o superior
+- SQLite (incluido con Python)
+- Bash (para `setup.sh`)
 
-- Practicar la creación y uso de un entorno virtual.
-- Diseñar y generar una base de datos SQLite con las tablas necesarias.
-- Implementar la lógica de negocio para operaciones bancarias básicas.
-- Manejar errores comunes (clientes no existentes, saldos insuficientes, emails duplicados).
-- Construir una interfaz de línea de comandos interactiva y presentar resultados en tablas.
+## Instalación
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/bank_app.git
+   cd bank_app
+   ```
+2. Crea y activa el entorno virtual:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate   # En Windows: .venv\Scripts\activate
+   ```
+3. Instala las dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. (Opcional) Usa el script automatizado:
+   ```bash
+   bash setup.sh
+   ```
 
 ## Funcionalidades implementadas
 
 1. **Inicialización de la base de datos (`db.py`):**
-   - Conexión a `banco.db` y creación de tablas para clientes, cuentas y transacciones.
+   - Crea `banco.db` con tablas para clientes, cuentas y movimientos.
 2. **Lógica de negocio (`operations.py`):**
-   - Creación, consulta y listado de clientes y cuentas.
+   - Crear, consultar y listar clientes y cuentas.
    - Depósitos y retiros con validación de saldo.
-   - Registro de cada operación en la tabla de transacciones.
+   - Registro de cada operación en la tabla de movimientos.
 3. **Interfaz de línea de comandos (`run.py`):**
-   - Menú interactivo que guía al usuario por las distintas operaciones.
-   - Captura de entrada y despliegue de resultados con la biblioteca `tabulate`.
-   - Gestión de excepciones y mensajes claros ante errores.
+   - Menú interactivo para seleccionar operaciones.
+   - Captura de entradas y despliegue de resultados con `tabulate`.
+   - Manejo de excepciones y mensajes claros ante errores.
 4. **Script de ejecución (`setup.sh`):**
-   - Automatiza la creación del entorno virtual, instalación de dependencias y arranque de la aplicación.
+   - Automatiza creación de entorno, instalación de dependencias y arranque de la aplicación.
 
 ## Estructura del proyecto
 
@@ -37,17 +54,19 @@ bank_app/
 ├── operations.py          # lógica de negocio
 ├── run.py                 # interfaz CLI principal
 ├── setup.sh               # script de configuración y ejecución
-├── requirements.txt       # dependencias del proyecto
+├── requirements.txt       # dependencias del proyecto (ej. tabulate)
 └── README.md              # este archivo
 ```
 
 ## Uso rápido
 
-Para arrancar la aplicación, ejecuta:
 ```bash
 bash setup.sh
 ```
-Sigue las indicaciones del menú para crear clientes, abrir cuentas y realizar transacciones.
+
+## Dependencias
+
+- `tabulate`: formatea tablas en la consola.
 
 ## Licencia
 
