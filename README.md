@@ -67,7 +67,3 @@ bash setup.sh
 ## Dependencias
 
 - `tabulate`: formatea tablas en la consola.
-
-## Licencia
-
-Este proyecto se entregó como parte de un taller académico y no tiene licencia asignada.
