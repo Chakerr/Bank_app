@@ -7,6 +7,7 @@
 - Python 3.8 o superior
 - SQLite (incluido con Python)
 - Bash (para `setup.sh`)
+  
 
 ## Instalación
 
